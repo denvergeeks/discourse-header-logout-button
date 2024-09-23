@@ -4,6 +4,7 @@ import { iconNode } from "discourse-common/lib/icon-library";
 import I18n from "I18n";
 import DButton from "discourse/components/d-button";
 import { apiInitializer } from "discourse/lib/api";
+import User from "discourse/models/user";  // Import the User model
 
 export default apiInitializer("1.0", (api) => {
       const currentUser = api.container.lookup("service:current-user");
