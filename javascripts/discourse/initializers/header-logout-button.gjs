@@ -1,7 +1,7 @@
 import { h } from "virtual-dom";
 import { withPluginApi } from "discourse/lib/plugin-api";
 import { iconNode } from "discourse-common/lib/icon-library";
-import I18n from "discourse-lib/i18n"; // Adjust import based on your setup
+import I18n from "discourse/lib/i18n"; // Adjust import based on your setup
 import { apiInitializer } from "discourse/lib/api";
 
 export default apiInitializer("1.0", (api) => {
