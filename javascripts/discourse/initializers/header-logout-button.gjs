@@ -9,9 +9,9 @@ export default apiInitializer("1.0", (api) => {
   
   if (currentUser) {
     api.headerIcons.add("header-logout-button", () => {
-      return h("li", { className: "header-logout-button header-dropdown-toggle" }, [
+      return h("li", { class: "header-logout-button header-dropdown-toggle" }, [
         h("button", {
-          className: "btn-primary btn-small",
+          class: "btn-primary btn-small",
           onclick() {
             api.container.lookup("router:main").send("logout");
           },
