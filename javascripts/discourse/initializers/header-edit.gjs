@@ -6,31 +6,25 @@ import I18n from "discourse-i18n";
 import DButton from "discourse/components/d-button";
 import { apiInitializer } from "discourse/lib/api";
 
-export default {
-  initialize() {
-    withPluginApi("1.28.0", (api) => {
+export default apiInitializer("1.0", (api) => {
       const currentUser = api.container.lookup("service:current-user");
         if (currentUser !== null) {
          api.headerIcons.add("header-logout-button",
           <template>
-
-<li class="header-logout-button header-dropdown-toggle">
-  <DButton @action={{route-action "logout"}}>
-    <span class="btn-primary btn-small">
-      <span>
-        {{i18n "user.log_out"}}
-      </span>
-      <span>
-        {{d-icon "sign-out-alt"}}
-      </span>
-    </span>
-  </DButton>
-</li>
+            <li class="header-logout-button header-dropdown-toggle">
+              <DButton @action={{route-action "logout"}}>
+                <span class="btn-primary btn-small">
+                  <span>
+                    {{i18n "user.log_out"}}
+                  </span>
+                  <span>
+                    {{d-icon "sign-out-alt"}}
+                  </span>
+                </span>
+              </DButton>
+            </li>
           </template>);
-        }
-    });
-  },
-};
-
+  }
+});
 
 
