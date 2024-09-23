@@ -3,6 +3,9 @@ import { withPluginApi } from "discourse/lib/plugin-api";
 import { iconNode } from "discourse-common/lib/icon-library";
 import I18n from "discourse-i18n";
 
+import DButton from "discourse/components/d-button";
+import { apiInitializer } from "discourse/lib/api";
+
 export default {
   initialize() {
     withPluginApi("1.28.0", (api) => {
