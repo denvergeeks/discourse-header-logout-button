@@ -1,7 +1,7 @@
 import { h } from "virtual-dom";
 import { withPluginApi } from "discourse/lib/plugin-api";
 import { iconNode } from "discourse-common/lib/icon-library";
-import "I18n";
+import I18n from "I18n";
 import DButton from "discourse/components/d-button";
 import { apiInitializer } from "discourse/lib/api";
 
